@@ -12,7 +12,7 @@ const Reviews = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-accent text-sm tracking-[0.5em] uppercase mb-4">
-                        Guest Experience
+                        Testimonials
                     </h2>
                 </motion.div>
 

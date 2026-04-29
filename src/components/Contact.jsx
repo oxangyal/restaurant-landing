@@ -1,6 +1,6 @@
-import { FaFacebook, FaTelegram, FaVk, FaWhatsapp } from "react-icons/fa";
+import { CONTACT_DATA, RESTAURANT_INFO } from "../constants";
+import { FaFacebook, FaTelegram, FaWhatsapp } from "react-icons/fa";
 
-import { CONTACT_INFO } from "../constants";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -9,24 +9,30 @@ const Contact = () => {
             <div className="flex flex-col md:flex-row gap-12 items-center">
                 <div className="flex-1">
                     <h2 className="text-5xl font-bold text-white mb-10 tracking-tight">
-                    Visit Us
+                        {CONTACT_DATA.title}
                     </h2>
                     <div className="space-y-6 text-neutral-400 uppercase tracking-widest text-xs">
                         <p>
                             <span className="text-white font-bold">
-                                Address:
+                                {CONTACT_DATA.addressLabel}:
                             </span>{" "}
-                            {CONTACT_INFO.address}
+                            {RESTAURANT_INFO.address}
                         </p>
                         <p>
                             <span className="text-white font-bold">
-                            Hours:
+                                {CONTACT_DATA.hoursLabel}:
                             </span>{" "}
-                            {CONTACT_INFO.workingHours}
+                            {CONTACT_DATA.hoursValue}
                         </p>
                         <p>
-                            <span className="text-white font-bold">Phone:</span>{" "}
-                            {CONTACT_INFO.phone}
+                            <span className="text-white font-bold">
+                                {CONTACT_DATA.phoneLabel}:
+                            </span>{" "}
+                            {RESTAURANT_INFO.phone}
+                        </p>
+                        <p>
+                            <span className="text-white font-bold">Email:</span>{" "}
+                            {RESTAURANT_INFO.email}
                         </p>
                     </div>
 

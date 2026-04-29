@@ -1,8 +1,18 @@
+import burrataiImg from "../assets/burratahei.png";
+import kalecaesarImg from "../assets/kalecaesar.png";
+import lobsterrisImg from "../assets/lobsterris.png";
+import martinisigImg from "../assets/martinisig.png";
+import teacoldImg from "../assets/teacold.png";
+import tiramisuImg from "../assets/tiramisu.png";
+import truffleArancinheiiImg from "../assets/trufflear.png";
+import wagyuribiImg from "../assets/wagyurib.png";
+import wildsalmonImg from "../assets/wildsalmon.png";
+
 export const RESTAURANT_INFO = {
     name: "L’AMORE",
     tagline: "Italian Restaurant",
     phone: "+1 781 567 43 54",
-    email: "reservations@lamore.net",
+    email: "contact@lamore-restaurant.net",
     address: "123 Washington Street, Boston, MA",
 };
 
@@ -10,8 +20,8 @@ export const NAV_LINKS = [
     { id: "menu", name: "Menu", path: "/menu" },
     { id: "story", name: "Our Story", path: "/about" },
     { id: "atmosphere", name: "Atmosphere", path: "/atmosphere" },
-    { id: "testimonials", name: "Testimonials", path: "/reviews" }, 
-    { id: "contact", name: "Contact", path: "/contact" },
+    { id: "testimonials", name: "Testimonials", path: "/reviews" },
+    { id: "location", name: "Location", path: "/location" },
 ];
 
 export const HERO_TEXT = {
@@ -22,7 +32,7 @@ export const HERO_TEXT = {
 };
 
 export const CONTACT_DATA = {
-    title: "Visit us",
+    title: "Visit Us",
     addressLabel: "Address",
     hoursLabel: "Hours",
     phoneLabel: "Phone",
@@ -38,14 +48,14 @@ export const MENU_CATEGORIES = [
                 price: "18",
                 description:
                     "Crispy risotto balls, wild mushrooms, truffle aioli.",
-                image: "https://plus.unsplash.com/premium_photo-1664205766159-e39d04b2b943?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                image: truffleArancinheiiImg,
             },
             {
                 name: "Burrata & Heirloom",
                 price: "22",
                 description:
                     "Creamy burrata, balsamic pearls, tomatos, basil oil.",
-                image: "https://images.unsplash.com/photo-1580638149300-65f0b9e8fbff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                image: burrataiImg,
             },
         ],
     },
@@ -56,20 +66,20 @@ export const MENU_CATEGORIES = [
                 name: "Wagyu Ribeye",
                 price: "65",
                 description: "Grade A5, smoked sea salt, baked potatos",
-                image: "https://images.unsplash.com/photo-1720701247839-9b8433398385?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                image: wagyuribiImg,
             },
             {
                 name: "Lobster Risotto",
                 price: "48",
                 description: "Butter-poached Atlantic lobster, saffron, pasta.",
-                image: "https://images.unsplash.com/photo-1498603273107-62080b9e4963?q=80&w=660&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                image: lobsterrisImg,
             },
             {
                 name: "Wild Salmon",
                 price: "38",
                 description:
                     "Pan-seared salmon, asparagus spears, lemon-butter velouté.",
-                image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=800&auto=format&fit=crop",
+                image: wildsalmonImg,
             },
             {
                 name: "Truffle Tagliatelle",
@@ -108,7 +118,7 @@ export const MENU_CATEGORIES = [
                 price: "17",
                 description:
                     "Garlic focaccia croutons, 24-month aged parmesan.",
-                image: "https://plus.unsplash.com/premium_photo-1664478283448-94d7b72a23ed?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                image: kalecaesarImg,
             },
         ],
     },
@@ -120,7 +130,7 @@ export const MENU_CATEGORIES = [
                 price: "14",
                 description:
                     "Mascarpone cream, espresso-soaked ladyfingers, gold leaf.",
-                image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=600",
+                image: tiramisuImg,
             },
             {
                 name: "Deconstructed Cheesecake",
@@ -151,22 +161,21 @@ export const MENU_CATEGORIES = [
                 name: "L'Amore Signature Martini",
                 price: "18",
                 description: "Premium gin, elderflower liqueur, fresh orange.",
-                image: "https://images.unsplash.com/photo-1629386587303-3cb98e8a1512?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                image: martinisigImg,
             },
             {
                 name: "Sparkling Hibiscus Tea",
                 price: "9",
                 description:
                     "Hand-crafted non-alcoholic infusion with rose petals.",
-                image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=600",
+                image: teacoldImg,
             },
         ],
     },
 ];
 
 export const BOOKING_PAGE_DATA = {
-    title: "RESERVE A TABLE",
-    subtitle: "Our manager will call you shortly to confirm your booking.",
+    title: "Reserve a table",
     submitButton: "RESERVE",
     disclaimer:
         "By clicking the button, you agree to the processing of personal data.",
@@ -192,4 +201,3 @@ export const TESTIMONIALS_DATA = [
         text: "L’AMORE isn't just a restaurant; it's a sensory journey. The atmosphere, the wine selection, and the service are simply unparalleled.",
     },
 ];
-

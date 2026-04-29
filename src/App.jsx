@@ -17,7 +17,6 @@ function App() {
                 <Navbar />
                 <main>
                     <Routes>
-                        {/* Главная страница */}
                         <Route
                             path="/"
                             element={
@@ -28,20 +27,11 @@ function App() {
                                 </>
                             }
                         />
-
-                        {/* Страница меню */}
                         <Route path="/menu" element={<Menu />} />
-                        {/* Страница о нас */}
                         <Route path="/about" element={<About />} />
-                        {/* Страница галереи */}
                         <Route path="/atmosphere" element={<Atmosphere />} />
-                        {/* Страница тестимониалов */}
                         <Route path="/reviews" element={<Reviews />} />
-
-                        {/* Страница контактов (адрес и карта) */}
-                        <Route path="/contact" element={<Location />} />
-
-                        {/* СТРАНИЦА БРОНИРОВАНИЯ (Добавляем эту строку!) */}
+                        <Route path="/location" element={<Location />} />
                         <Route path="/book" element={<BookingPage />} />
                     </Routes>
                 </main>

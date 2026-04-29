@@ -50,7 +50,7 @@ const Hero = () => {
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                     <Link to="/book">
                         <button className="min-w-[220px] rounded-full bg-accent px-10 py-4 text-[11px] font-bold text-slate-950 hover:bg-white transition-all duration-300 uppercase tracking-widest shadow-xl shadow-accent/20">
-                            Book a Table
+                            Reserve a Table
                         </button>
                     </Link>
 

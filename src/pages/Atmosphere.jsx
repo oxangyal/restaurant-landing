@@ -8,8 +8,8 @@ import { useRef } from "react";
 const GALLERY_IMAGES = [
     { src: int01, title: "Grand Dining Hall" },
     { src: int02, title: "The Private Lounge" },
-    { src: int03, title: "Acoustic Corner" },
-    { src: int04, title: "Acoustic Corner" },
+    { src: int03, title: "Patio" },
+    { src: int04, title: "Bar" },
 ];
 
 const Gallery = () => {
@@ -52,7 +52,7 @@ const Gallery = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="text-6xl md:text-8xl font-serif text-white tracking-tighter"
+                    className="text-3xl md:text-5xl font-serif text-white tracking-tighter"
                 >
                     Interior
                 </motion.h1>

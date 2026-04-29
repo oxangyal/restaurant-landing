@@ -1,4 +1,4 @@
-import { RESTAURANT_INFO } from "../constants";
+import { CONTACT_DATA, RESTAURANT_INFO } from "../constants";
 
 const Footer = () => {
     return (
@@ -8,9 +8,11 @@ const Footer = () => {
                     <h4 className="text-white text-[10px] font-bold tracking-[0.3em] uppercase mb-4">
                         Visit Us
                     </h4>
-
                     <p className="text-neutral-500 text-xs leading-relaxed uppercase tracking-tighter">
                         {RESTAURANT_INFO.address}
+                    </p>
+                    <p className="text-neutral-500 text-xs uppercase tracking-tighter mt-1">
+                        {CONTACT_DATA.hoursValue}
                     </p>
                 </div>
 
@@ -18,11 +20,9 @@ const Footer = () => {
                     <h4 className="text-white text-[10px] font-bold tracking-[0.3em] uppercase mb-4">
                         Contact
                     </h4>
-
                     <p className="text-neutral-500 text-xs uppercase tracking-tighter">
                         {RESTAURANT_INFO.phone}
                     </p>
-
                     <p className="text-neutral-500 text-xs uppercase tracking-tighter">
                         {RESTAURANT_INFO.email}
                     </p>
@@ -32,7 +32,6 @@ const Footer = () => {
                     <h4 className="text-white text-[10px] font-bold tracking-[0.3em] uppercase mb-4">
                         Experience
                     </h4>
-
                     <p className="text-neutral-600 text-[9px] uppercase tracking-[0.2em]">
                         © 2026 {RESTAURANT_INFO.name}. All Rights Reserved.
                     </p>

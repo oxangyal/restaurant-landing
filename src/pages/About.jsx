@@ -11,9 +11,9 @@ const About = () => {
                     className="text-center mb-20"
                 >
                     <h2 className="text-accent text-sm tracking-[0.5em] uppercase mb-4">
-                        Our Heritage
+                        Our Story
                     </h2>
-                    <h1 className="text-5xl md:text-7xl font-serif tracking-tighter">
+                    <h1 className="text-3xl md:text-5xl font-serif tracking-tighter">
                         THE ART OF ITALIAN CUISINE
                     </h1>
                 </motion.div>
