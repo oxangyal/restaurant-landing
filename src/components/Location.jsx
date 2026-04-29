@@ -84,22 +84,19 @@ const Location = () => {
                     </div>
 
                     <div className="flex-1 w-full h-[450px] relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
-                        <div className="absolute inset-0 bg-[#0f172a] opacity-80">
-                            <img
-                                src="https://api.maptiler.com/maps/toner-v2/static/auto/800x600.png?key=YOUR_KEY"
-                                className="w-full h-full object-cover grayscale opacity-30"
-                                alt="map"
-                            />
-                        </div>
-
-                        <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:20px_20px]"></div>
-
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                            <div className="relative">
-                                <div className="absolute -inset-4 bg-accent/20 rounded-full animate-ping"></div>
-                                <div className="w-6 h-6 bg-accent rounded-full border-4 border-slate-950 shadow-[0_0_15px_rgba(235,176,27,0.6)]"></div>
-                            </div>
-                        </div>
+                        <iframe
+                            title="Restaurant Location"
+                            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d571211.8519104852!2d-72.00391718521955!3d42.44447993976689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d42.458624199999996!2d-71.436685!4m5!1s0x89e3708444907fe9%3A0xa5daa363abf6929e!2s123%20Washington%20St%2C%20Boston%2C%20MA%2002111!3m2!1d42.3586202!2d-71.05784059999999!5e0!3m2!1sru!2sus!4v1777470385230!5m2!1sru!2sus"
+                            width="100%"
+                            height="100%"
+                            style={{
+                                border: 0,
+                                filter: "grayscale(1) invert(1) hue-rotate(180deg)",
+                            }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
                     </div>
                 </div>
             </div>

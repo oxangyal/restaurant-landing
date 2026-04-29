@@ -50,8 +50,9 @@ const Navbar = () => {
                     </button>
 
                     <button
-                        className="md:hidden text-white text-xl"
+                        className="md:hidden text-white text-xl p-2 rounded-full hover:text-accent transition-colors"
                         onClick={toggleMenu}
+                        aria-label={isOpen ? "Close menu" : "Open menu"}
                     >
                         {isOpen ? <RiCloseLine /> : <RiMenu3Line />}
                     </button>
@@ -80,7 +81,7 @@ const Navbar = () => {
                                 setIsOpen(false);
                                 navigate("/book");
                             }}
-                            className="mt-4 rounded-full border border-accent px-10 py-4 text-sm font-bold text-accent"
+                            className="mt-4 rounded-full border border-accent px-10 py-4 text-sm font-bold text-accent hover:bg-accent hover:text-black transition-all"
                         >
                             RESERVE A TABLE
                         </button>
