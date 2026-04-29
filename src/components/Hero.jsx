@@ -2,13 +2,17 @@ import { HERO_TEXT } from "../constants";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+// import landing from "../assets/hero-landing.png";
+
+
 const Hero = () => {
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center text-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
                     src="https://images.unsplash.com/photo-1662515248097-406b42b3bf96?q=80&w=2000"
-                    alt="L'AMORE Cuisine"
+                    // src={landing}
+                    alt="Elegant dining setting with soft lighting"
                     className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-black/40 to-black/20"></div>
@@ -33,7 +37,7 @@ const Hero = () => {
                     initial={{ opacity: 0, filter: "brightness(0.5)" }}
                     animate={{ opacity: 1, filter: "brightness(1)" }}
                     transition={{ delay: 0.3, duration: 1 }}
-                    className="mb-6 text-5xl font-light tracking-[0.3em] text-accent md:text-7xl lg:text-8xl uppercase font-serif"
+                    className="mb-6 text-5xl md:text-7xl lg:text-8xl font-serif text-accent tracking-tighter font-light uppercase"
                 >
                     L'AMORE
                 </motion.h1>
@@ -42,7 +46,7 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8 }}
-                    className="text-xs md:text-lg lg:text-xl tracking-[0.2em] font-light text-white/90 italic mb-16 max-w-2xl mx-auto leading-relaxed"
+                    className="text-[11px] md:text-sm tracking-[0.4em] font-light text-neutral-400 uppercase mb-4"
                 >
                     Exquisite taste with unique presentation
                 </motion.p>

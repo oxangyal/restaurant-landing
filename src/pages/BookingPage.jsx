@@ -38,9 +38,8 @@ const BookingPage = () => {
                     </div>
 
                     <div className="flex-1 w-full space-y-10 text-left">
-                        {/* Заголовки */}
                         <div className="space-y-3">
-                            <h2 className="text-5xl font-bold text-white tracking-tighter uppercase italic">
+                            <h2 className="text-4xl md:text-5xl font-serif text-white tracking-tighter">
                                 {BOOKING_PAGE_DATA.title}
                             </h2>
                             <p className="text-neutral-500 text-xs tracking-widest uppercase font-light">

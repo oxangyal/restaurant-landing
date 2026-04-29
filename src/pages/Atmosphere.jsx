@@ -40,7 +40,7 @@ const Gallery = () => {
 
     return (
         <section className="pt-32 pb-24 bg-slate-950 min-h-screen">
-            <div className="px-10 mb-12">
+            <div className="px-10 mb-12 text-center">
                 <motion.h2
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -48,14 +48,15 @@ const Gallery = () => {
                 >
                     Atmosphere
                 </motion.h2>
-                <motion.h1
+
+                <motion.h3
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="text-3xl md:text-5xl font-serif text-white tracking-tighter"
+                    className="text-4xl md:text-5xl font-serif text-white tracking-tighter"
                 >
                     Interior
-                </motion.h1>
+                </motion.h3>
             </div>
 
             <div className="w-full overflow-hidden">

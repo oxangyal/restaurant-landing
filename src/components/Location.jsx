@@ -9,7 +9,7 @@ const Location = () => {
             <div className="container mx-auto px-8">
                 <div className="flex flex-col md:flex-row gap-16 items-start">
                     <div className="flex-1 space-y-8">
-                        <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tighter">
+                        <h2 className="text-4xl md:text-5xl font-serif text-white tracking-tighter">
                             {CONTACT_DATA.title}
                         </h2>
 

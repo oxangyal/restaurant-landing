@@ -175,7 +175,7 @@ export const MENU_CATEGORIES = [
 ];
 
 export const BOOKING_PAGE_DATA = {
-    title: "Reserve a table",
+    title: "Reserve A Table",
     submitButton: "RESERVE",
     disclaimer:
         "By clicking the button, you agree to the processing of personal data.",
