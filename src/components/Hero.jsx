@@ -1,17 +1,14 @@
 import { HERO_TEXT } from "../constants";
 import { Link } from "react-router-dom";
+import landingImg from "../assets/hero.png";
 import { motion } from "framer-motion";
-
-// import landing from "../assets/hero-landing.png";
-
 
 const Hero = () => {
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center text-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1662515248097-406b42b3bf96?q=80&w=2000"
-                    // src={landing}
+                    src={landingImg}
                     alt="Elegant dining setting with soft lighting"
                     className="h-full w-full object-cover"
                 />
