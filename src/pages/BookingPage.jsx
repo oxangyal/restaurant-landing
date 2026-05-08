@@ -5,6 +5,7 @@ import { useState } from "react";
 const BookingPage = () => {
     const [formData, setFormData] = useState({
         name: "",
+        email: "",
         phone: "",
         date: "",
         time: "",
@@ -15,7 +16,7 @@ const BookingPage = () => {
         e.preventDefault();
         console.log("Reservation Data:", formData);
         alert(
-            `Thank you, ${formData.name}! Reservation for ${formData.guests} guests on ${formData.date} received.`,
+            `Thank you, ${formData.name}! Reservation for ${formData.guests} guests on ${formData.date} received. A confirmation has been sent to ${formData.email}.`,
         );
     };
 
@@ -57,10 +58,31 @@ const BookingPage = () => {
                                     type="text"
                                     placeholder="Enter your name"
                                     className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                    value={formData.name}
                                     onChange={(e) =>
                                         setFormData({
                                             ...formData,
                                             name: e.target.value,
+                                        })
+                                    }
+                                    required
+                                />
+                            </div>
+
+                            {/* Email */}
+                            <div className="flex flex-col gap-2">
+                                <label className="text-xs uppercase tracking-[0.2em] text-white font-bold">
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    placeholder="email@example.com"
+                                    className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                    value={formData.email}
+                                    onChange={(e) =>
+                                        setFormData({
+                                            ...formData,
+                                            email: e.target.value,
                                         })
                                     }
                                     required
@@ -76,6 +98,7 @@ const BookingPage = () => {
                                     type="tel"
                                     placeholder="+1 (___) ___ __ __"
                                     className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700 tabular-nums"
+                                    value={formData.phone}
                                     onChange={(e) =>
                                         setFormData({
                                             ...formData,
@@ -95,6 +118,7 @@ const BookingPage = () => {
                                     <input
                                         type="date"
                                         className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                        value={formData.date}
                                         onChange={(e) =>
                                             setFormData({
                                                 ...formData,
@@ -111,6 +135,7 @@ const BookingPage = () => {
                                     <input
                                         type="time"
                                         className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                        value={formData.time}
                                         onChange={(e) =>
                                             setFormData({
                                                 ...formData,
@@ -132,6 +157,7 @@ const BookingPage = () => {
                                     placeholder="Guests count"
                                     min="1"
                                     className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                    value={formData.guests}
                                     onChange={(e) =>
                                         setFormData({
                                             ...formData,
