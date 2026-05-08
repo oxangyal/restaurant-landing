@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <section className="relative flex min-h-screen flex-col items-center justify-center text-center overflow-hidden">
+        <section className="relative flex min-h-screen flex-col items-center justify-center text-center overflow-hidden pb-24 md:pb-0">
             <div className="absolute inset-0 z-0">
                 <img
                     src={landingImg}
@@ -48,13 +48,21 @@ const Hero = () => {
                     Exquisite taste with unique presentation
                 </motion.p>
 
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <div className="hidden sm:flex flex-row justify-center items-center gap-6">
                     <Link to="/book">
                         <button className="min-w-[220px] rounded-full bg-accent px-10 py-4 text-[11px] font-bold text-slate-950 hover:bg-white transition-all duration-300 uppercase tracking-widest shadow-xl shadow-accent/20">
                             Reserve a Table
                         </button>
                     </Link>
 
+                    <Link to="/menu">
+                        <button className="min-w-[220px] rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-10 py-4 text-[11px] font-bold text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest">
+                            Our Menu
+                        </button>
+                    </Link>
+                </div>
+
+                <div className="flex sm:hidden justify-center">
                     <Link to="/menu">
                         <button className="min-w-[220px] rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-10 py-4 text-[11px] font-bold text-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest">
                             Our Menu

@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Location from "./components/Location";
 import Menu from "./components/Menu";
+import MobileReserveBar from "./components/MobileReserveBar";
 import Navbar from "./components/Navbar";
 import Reviews from "./pages/Reviews";
 
@@ -15,6 +16,7 @@ function App() {
         <Router>
             <div className="relative min-h-screen bg-slate-950 text-neutral-300">
                 <Navbar />
+                <MobileReserveBar />
                 <main>
                     <Routes>
                         <Route
