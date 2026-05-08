@@ -1,19 +1,34 @@
+import { AnimatePresence, motion } from "framer-motion";
+
 import { BOOKING_PAGE_DATA } from "../constants";
-import { motion } from "framer-motion";
 import { useState } from "react";
+
+const MAX_GUESTS = 10;
+const today = new Date().toISOString().split("T")[0];
 
 const BookingPage = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
-        date: "",
+        date: today,
         time: "",
         guests: "",
     });
 
+    const [error, setError] = useState("");
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        setError("");
+
+        if (parseInt(formData.guests) > MAX_GUESTS) {
+            setError(
+                `For parties larger than ${MAX_GUESTS}, please contact us directly by phone to ensure we can accommodate you.`,
+            );
+            return;
+        }
+
         console.log("Reservation Data:", formData);
         alert(
             `Thank you, ${formData.name}! Reservation for ${formData.guests} guests on ${formData.date} received. A confirmation has been sent to ${formData.email}.`,
@@ -117,7 +132,8 @@ const BookingPage = () => {
                                     </label>
                                     <input
                                         type="date"
-                                        className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                        min={today}
+                                        className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300"
                                         value={formData.date}
                                         onChange={(e) =>
                                             setFormData({
@@ -132,9 +148,8 @@ const BookingPage = () => {
                                     <label className="text-xs uppercase tracking-[0.2em] text-white font-bold">
                                         Preferred Time
                                     </label>
-                                    <input
-                                        type="time"
-                                        className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
+                                    <select
+                                        className="w-full bg-slate-950 border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300"
                                         value={formData.time}
                                         onChange={(e) =>
                                             setFormData({
@@ -143,7 +158,33 @@ const BookingPage = () => {
                                             })
                                         }
                                         required
-                                    />
+                                    >
+                                        <option
+                                            value=""
+                                            disabled
+                                            className="text-neutral-700"
+                                        >
+                                            Select a time
+                                        </option>
+                                        {Array.from({ length: 17 }, (_, i) => {
+                                            const totalMinutes =
+                                                15 * 60 + i * 30;
+                                            const h = Math.floor(
+                                                totalMinutes / 60,
+                                            );
+                                            const m = totalMinutes % 60;
+                                            const value = `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+                                            const label = `${h > 12 ? h - 12 : h}:${String(m).padStart(2, "0")} ${h >= 12 ? "PM" : "AM"}`;
+                                            return (
+                                                <option
+                                                    key={value}
+                                                    value={value}
+                                                >
+                                                    {label}
+                                                </option>
+                                            );
+                                        })}
+                                    </select>
                                 </div>
                             </div>
 
@@ -158,15 +199,43 @@ const BookingPage = () => {
                                     min="1"
                                     className="w-full bg-transparent border border-white/20 rounded-full px-6 py-4 text-white focus:border-accent outline-none transition-all duration-300 placeholder:text-neutral-700"
                                     value={formData.guests}
-                                    onChange={(e) =>
+                                    onChange={(e) => {
                                         setFormData({
                                             ...formData,
                                             guests: e.target.value,
-                                        })
-                                    }
+                                        });
+                                        setError("");
+                                    }}
                                     required
                                 />
+                                <AnimatePresence>
+                                    {parseInt(formData.guests) > MAX_GUESTS && (
+                                        <motion.p
+                                            initial={{ opacity: 0, y: -4 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -4 }}
+                                            className="text-amber-400/80 text-xs px-2"
+                                        >
+                                            For parties over {MAX_GUESTS},
+                                            please call us to arrange your
+                                            booking.
+                                        </motion.p>
+                                    )}
+                                </AnimatePresence>
                             </div>
+
+                            <AnimatePresence>
+                                {error && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: "auto", opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        className="bg-red-500/10 border border-red-500/20 text-red-400 p-4 rounded-2xl text-sm font-light"
+                                    >
+                                        {error}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
 
                             <button
                                 type="submit"
