@@ -18,9 +18,15 @@ const Location = () => {
                                 <span className="text-white font-bold mb-1">
                                     {CONTACT_DATA.addressLabel}:
                                 </span>
-                                <span className="text-neutral-500">
+                                
+                                <a
+                                    href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(RESTAURANT_INFO.address)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-neutral-500 hover:text-accent transition-colors"
+                                >
                                     {RESTAURANT_INFO.address}
-                                </span>
+                                </a>
                             </p>
 
                             <p className="flex flex-col">
@@ -36,9 +42,12 @@ const Location = () => {
                                 <span className="text-white font-bold mb-1">
                                     {CONTACT_DATA.phoneLabel}:
                                 </span>
-                                <span className="text-neutral-500">
+                                <a
+                                    href={`tel:${RESTAURANT_INFO.phone}`}
+                                    className="text-neutral-500 hover:text-accent transition-colors"
+                                >
                                     {RESTAURANT_INFO.phone}
-                                </span>
+                                </a>
                             </p>
                         </div>
 
